@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text"  id="inputvalue">
+        <div class="keys">
+
+            <button onclick="clearbtn()">AC</button>
+        <button onclick="backspacebtn()"><i class="material-icons" style="font-size:15px">backspace</i>
+        </button>
+        <button id="appenddisplay" >%</button>
+        <button id="appenddisplay">/</button>
+        <button id="appenddisplay">7</button>
+        <button id="appenddisplay">8</button>
+        <button id="appenddisplay">9</button>
+        <button id="appenddisplay">*</button>
+        <button id="appenddisplay">4</button>
+        <button id="appenddisplay">5</button>
+        <button id="appenddisplay">6</button>
+        <button id="appenddisplay">-</button>
+
+        <button id="appenddisplay">1</button>
+        <button id="appenddisplay">2</button>
+        <button id="appenddisplay">3</button>
+        <button id="appenddisplay">+</button>
+        <button id="appenddisplay">0</button>
+        <button id="appenddisplay">.</button>
+        <button id="calculate"  onclick="calculate()">=</button>
+        </div>
+        
+
+    </div>
+    <script>
+        const buttons =document.querySelectorAll("#appenddisplay");
+
+        const input = document.querySelector("input");
+
+
+       
+
+        buttons.forEach(button => {
+            button.onclick =()=>{
+                appenddisplay(button.textContent);
+            }
+            
+        });
+
+        function appenddisplay(value){
+            const operators = ["+", "-", "*", "/", "%"];
+        const lastchar = input.value.slice(-1);
+
+           if(operators.includes(lastchar)&&operators.includes(value)&& value !== "-"){
+            return;
+           }
+            input.value += value;
+        }
+
+
+        function calculate(){
+            input.value = eval(input.value);
+
+        }
+
+        function clearbtn(){
+            input.value = "";
+        }
+
+        function backspacebtn(){
+            input.value = input.value.slice(0,-1);
+        }
+
+    </script>
+</body>
+</html>

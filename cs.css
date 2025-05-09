@@ -1,0 +1,99 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background-color: #121212; /* Optional: Set a background color */
+}
+.container{
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    background-color: rgb(35, 33, 33);
+
+}
+button{
+    width: 75px;
+    height: 65px;
+    border-radius: 12px;
+    border: none;
+    color: rgb(255, 145, 0);
+    font-size: 1.5rem;
+    box-shadow: 0 10px 10px rgba(44, 44, 44, 0.5); /* Bottom shadow */
+
+    background-color: rgb(21, 20, 20);
+    cursor: pointer;
+}
+.keys{
+    max-width: 400px;
+    display: grid;
+    gap:15px;
+    grid-template-columns: auto auto auto auto;
+}
+
+input{
+    width:100%;
+    padding: 20px;
+    text-align: left;
+    border: none
+    ;
+    font-size: 3rem;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 50px;
+    background-color: rgb(35, 33, 33);
+}
+#calculate{
+    grid-column: span 2;
+    background-color: rgb(255, 145, 0);
+color: white;
+width: auto;}
+@media (max-width: 600px) {
+    
+    .keys{
+        max-width: 200px;
+        display: grid;
+        gap:15px;
+        grid-template-columns: auto auto auto auto;
+
+    }
+
+    button{
+        width: 35px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        color: rgb(255, 145, 0);
+        font-size: 0.7rem;
+        box-shadow: 0 10px 10px rgba(44, 44, 44, 0.5); /* Bottom shadow */
+    
+        background-color: rgb(21, 20, 20);
+        cursor: pointer;
+    }
+
+    input{
+        width:100%;
+        padding: 10px;
+        text-align: left;
+        border: none
+        ;
+        font-size: 1.3rem;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 50px;
+        background-color: rgb(35, 33, 33);
+    }
+    .container{
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 200px;
+        background-color: rgb(35, 33, 33);
+    
+    }
+}
