@@ -3,10 +3,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     margin: 0;
-    background-color: #121212; /* Optional: Set a background color */
-}
+    background-color: #121212; 
 .container{
     align-items: center;
     padding: 20px;
@@ -22,7 +21,7 @@ button{
     border: none;
     color: rgb(255, 145, 0);
     font-size: 1.5rem;
-    box-shadow: 0 10px 10px rgba(44, 44, 44, 0.5); /* Bottom shadow */
+    box-shadow: 0 10px 10px rgba(44, 44, 44, 0.5); 
 
     background-color: rgb(21, 20, 20);
     cursor: pointer;
@@ -55,24 +54,32 @@ width: auto;}
 @media (max-width: 600px) {
     
     .keys{
-        max-width: 200px;
+        max-width: 250px;
         display: grid;
-        gap:15px;
+        gap:10px;
         grid-template-columns: auto auto auto auto;
 
     }
-
+   
     button{
-        width: 35px;
-        height: 30px;
+        width: 40px;
+        height: 35px;
         border-radius: 5px;
         border: none;
         color: rgb(255, 145, 0);
         font-size: 0.7rem;
-        box-shadow: 0 10px 10px rgba(44, 44, 44, 0.5); /* Bottom shadow */
-    
+        box-shadow: 0 10px 10px rgba(44, 44, 44, 0.5); 
         background-color: rgb(21, 20, 20);
         cursor: pointer;
+    }
+    body {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        margin: 0;
+        background-color: #121212; 
     }
 
     input{
@@ -90,9 +97,9 @@ width: auto;}
     }
     .container{
         align-items: center;
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
-        max-width: 200px;
+        max-width: 250px;
         background-color: rgb(35, 33, 33);
     
     }
